@@ -3,5 +3,17 @@ export interface WeatherInfo {
     city: string,
     temp: number,
     pressure: number,
-    sunset: Date
+    sunset: string
+}
+
+export interface WeatherInfoResponse {
+    name: string,
+    main: {
+        temp: number,
+        pressure: number
+    },
+    sys: {
+        sunset: number,
+        country: string,
+    },
 }
