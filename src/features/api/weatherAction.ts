@@ -14,7 +14,7 @@ export const weatherApi = createApi({
                 temp: data.main.temp,
                 pressure: data.main.pressure,
                 country: data.sys.country,
-                sunset: new Date(data.sys.sunset * 1000)
+                sunset: (new Date(data.sys.sunset * 1000)).toLocaleTimeString()
             })
         })
     })
